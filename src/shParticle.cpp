@@ -2,7 +2,7 @@
  *  shParticle.cpp
  *  openFrameworks
  *
- *  Created by ikainos on 3/21/09.
+ *  Created by latrokles on 3/21/09.
  *  Copyright 2009 Samurai Hippo. All rights reserved.
  *
  */
@@ -11,6 +11,7 @@
 
 shParticle::shParticle( )
 {
+    particleSize = 10;
 }
 
 void shParticle::setPosition( float x, float y )
@@ -21,6 +22,7 @@ void shParticle::setPosition( float x, float y )
 
 void shParticle::update( )
 {
+    particlePosition.y++;
 }
 
 void shParticle::draw( )

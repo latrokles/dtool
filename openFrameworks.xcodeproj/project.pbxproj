@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0540DBAA0F75A974006EB6C7 /* shParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0540DBA90F75A974006EB6C7 /* shParticle.cpp */; };
+		05C3B1E10F75E38C00630393 /* shLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C3B1E00F75E38C00630393 /* shLine.cpp */; };
 		E446644B0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E446641A0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp */; };
 		E446644C0F5B1CFD005D0BF0 /* ofAppRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E446641C0F5B1CFD005D0BF0 /* ofAppRunner.cpp */; };
 		E446644D0F5B1CFD005D0BF0 /* ofArduino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44664200F5B1CFD005D0BF0 /* ofArduino.cpp */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		0540DBA80F75A974006EB6C7 /* shParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shParticle.h; sourceTree = "<group>"; };
 		0540DBA90F75A974006EB6C7 /* shParticle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shParticle.cpp; sourceTree = "<group>"; };
+		05C3B1DF0F75E38C00630393 /* shLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shLine.h; sourceTree = "<group>"; };
+		05C3B1E00F75E38C00630393 /* shLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shLine.cpp; sourceTree = "<group>"; };
 		E44664190F5B1CFD005D0BF0 /* ofAppBaseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofAppBaseWindow.h; path = ../../../libs/openFrameworks/app/ofAppBaseWindow.h; sourceTree = SOURCE_ROOT; };
 		E446641A0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofAppGlutWindow.cpp; path = ../../../libs/openFrameworks/app/ofAppGlutWindow.cpp; sourceTree = SOURCE_ROOT; };
 		E446641B0F5B1CFD005D0BF0 /* ofAppGlutWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofAppGlutWindow.h; path = ../../../libs/openFrameworks/app/ofAppGlutWindow.h; sourceTree = SOURCE_ROOT; };
@@ -748,6 +751,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				0540DBA80F75A974006EB6C7 /* shParticle.h */,
 				0540DBA90F75A974006EB6C7 /* shParticle.cpp */,
+				05C3B1DF0F75E38C00630393 /* shLine.h */,
+				05C3B1E00F75E38C00630393 /* shLine.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -844,6 +849,7 @@
 				E446645B0F5B1CFD005D0BF0 /* ofVideoGrabber.cpp in Sources */,
 				E446645C0F5B1CFD005D0BF0 /* ofVideoPlayer.cpp in Sources */,
 				0540DBAA0F75A974006EB6C7 /* shParticle.cpp in Sources */,
+				05C3B1E10F75E38C00630393 /* shLine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
