@@ -3,7 +3,7 @@
 
 
 #include "ofMain.h"
-#include "shParticle.h"
+#include "shLine.h"
 
 class testApp : public ofBaseApp{
 	
@@ -21,7 +21,9 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 		void resized(int w, int h);
         
-        vector <shParticle>     pts;
+        shLine              currentLine;
+        vector <shLine>     lines;
+        bool                life;
 };
 
 #endif	

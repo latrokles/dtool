@@ -10,15 +10,29 @@ void testApp::setup(){
     
     ofSetFullscreen(true);
     ofBackground(0, 0, 0);
+    
+    life = false;
 }
 
 
 //--------------------------------------------------------------
 void testApp::update(){
+    if( life == true )
+    {
+        currentLine.update( );
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
+    currentLine.draw( );
+    if( lines.size( ) > 0 )
+    {
+        for( int i = 0; i < lines.size( ); i++ )
+        {
+            lines[ i ].draw( );
+        }
+    }
 }
 
 
@@ -28,6 +42,10 @@ void testApp::keyPressed(int key){
     {
         case ' ':
             break;
+        case 'l':
+            life = true;
+            break;
+
         default:
             break;
     }
@@ -43,14 +61,24 @@ void testApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button){
+    currentLine.addPoint( x, y );
 }
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
+    if( life == true )
+    {
+        currentLine.setTarget(x, y);
+    }
+    else
+    {
+        currentLine.clear( );
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
+    lines.push_back( currentLine );
 }
 
 //--------------------------------------------------------------

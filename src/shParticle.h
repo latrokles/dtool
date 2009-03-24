@@ -12,16 +12,25 @@
  class shParticle
  {
     public:
-        shParticle();
+        shParticle( );
         
-        void setPosition(float x, float y);
-        void update();
-        void draw();
+        void setPosition( int x, int y );
+        void setTarget( int x, int y );
+        void setParticleSpeed( float newSpeed );
+        void update( );
+        void draw( );
+        
+        int  getPositionInX( );
+        int  getPositionInY( );
     
     private:
         ofPoint     particlePosition;
         ofPoint     particleVelocity;
+        ofPoint     particleTarget;
         int         particleSize;
+        float       particleSpeed;
+        float       particleDrag;
+        bool        targetMode;
  };
 
 #endif

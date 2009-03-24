@@ -8,6 +8,7 @@
  */
 #ifndef SH_LINE
 #include "shParticle.h"
+#include "ofMain.h"
 
 class shLine
 {
@@ -19,12 +20,13 @@ class shLine
         
         void addPoint( int x, int y );
         void setColor( int r, int g, int b );
+        void setTarget( int x, int y );
         
         int getLength( );
         
     private:
-        vector <shParticle> line_points;
-        int                 line_length;
+        vector <shParticle> linePoints;
+        int                 lineLength;
         int                 red;
         int                 green;
         int                 blue;
