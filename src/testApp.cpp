@@ -8,23 +8,37 @@ void testApp::setup(){
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
     
-    ofSetFullscreen(true);
+    //ofSetFullscreen(true);
+    ofSetWindowShape(600, 600);
     ofBackground(0, 0, 0);
     
-    life = false;
+    linesAreAlive = false;
 }
 
 
 //--------------------------------------------------------------
 void testApp::update(){
-    if( life == true )
+    if( linesAreAlive == true )
     {
-        currentLine.update( );
+        for( int i=0; i < lines.size( ); i++ )
+        {
+            lines[ i ].update( );
+        }
     }
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
+
+    if( linesAreAlive == true )
+    {
+        ofDrawBitmapString("Target is Set.\nTarget: " + ofToString(currentTargetX, 0) + ", " + ofToString(currentTargetY, 0), 20, 20);
+    }
+    else
+    {
+        ofDrawBitmapString("Target is not Set.", 20, 20 );
+    }
+    
     currentLine.draw( );
     if( lines.size( ) > 0 )
     {
@@ -41,9 +55,10 @@ void testApp::keyPressed(int key){
     switch( key )
     {
         case ' ':
+            lines.clear();
             break;
         case 'l':
-            life = true;
+            linesAreAlive = !linesAreAlive;
             break;
 
         default:
@@ -61,24 +76,32 @@ void testApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button){
-    currentLine.addPoint( x, y );
+    if( linesAreAlive != true)
+    {
+        currentLine.addPoint( x, y );
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-    if( life == true )
+    if( linesAreAlive == true )
     {
-        currentLine.setTarget(x, y);
+        for( int i = 0; i < lines.size( ); i++ )
+        {
+            lines[ i ].setTarget( x, y );
+        }
     }
-    else
-    {
-        currentLine.clear( );
-    }
+    currentTargetX = x;
+    currentTargetY = y;
 }
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
-    lines.push_back( currentLine );
+    if( linesAreAlive != true )
+    {
+        lines.push_back( currentLine );
+    }
+    currentLine.clear( );
 }
 
 //--------------------------------------------------------------

@@ -24,13 +24,15 @@ void shLine::update( )
 
 void shLine::draw( )
 {
+
+
     if( linePoints.size( ) > 0 )
     {
         ofNoFill( );
         ofBeginShape( );
         for( int i = 0; i < linePoints.size( ); i++ )
         {
-            ofVertex(linePoints[ i ].getPositionInX( ), linePoints[ i ].getPositionInY( ) );
+            ofCurveVertex(linePoints[ i ].getPositionInX( ), linePoints[ i ].getPositionInY( ) );
         }
         ofEndShape( false );
     }

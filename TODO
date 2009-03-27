@@ -1,0 +1,12 @@
+TODO
+====
+[X] Create particles w/ standard functions (setPos, setVelocity, etc.)
+[X] Create Lines using particles as points.
+[X] Add interactivity to particles and lines.
+[X] Begin on test app.
+[X] Write code in testApp to make lines interactive.
+[ ] Add a color palete tto the window (maybe imgs from where I can pick out pixel colors from?)
+[ ] Hide cursor (it messes up w/ the exp.)
+[ ] Figure out how to select individual lines and move them (this may require serious work on testApp.
+[ ] Brushes??
+[ ] Clean up some of those magic numbers in there.

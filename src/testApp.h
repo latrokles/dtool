@@ -23,7 +23,11 @@ class testApp : public ofBaseApp{
         
         shLine              currentLine;
         vector <shLine>     lines;
-        bool                life;
+        bool                linesAreAlive;
+        
+        //Target Stuff
+        int     currentTargetX;
+        int     currentTargetY;
 };
 
 #endif	

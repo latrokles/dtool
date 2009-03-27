@@ -11,8 +11,10 @@
 
 shParticle::shParticle( )
 {
-    particleSize = 10;
-    targetMode   = false;
+    particleSize    = 10;
+    particleDrag    = 0.98;
+    particleSpeed   = 0.68;
+    targetMode      = false;
 }
 
 void shParticle::setPosition( int x, int y )
