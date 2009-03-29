@@ -38,7 +38,6 @@ void testApp::draw(){
     {
         ofDrawBitmapString("Target is not Set.", 20, 20 );
     }
-    
     currentLine.draw( );
     if( lines.size( ) > 0 )
     {
@@ -86,10 +85,7 @@ void testApp::mouseDragged(int x, int y, int button){
 void testApp::mousePressed(int x, int y, int button){
     if( linesAreAlive == true )
     {
-        for( int i = 0; i < lines.size( ); i++ )
-        {
-            lines[ i ].setTarget( x, y );
-        }
+        lines[ lines.size( ) - 1 ].setTarget( x, y );
     }
     currentTargetX = x;
     currentTargetY = y;
